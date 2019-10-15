@@ -4,7 +4,7 @@ import org.junit.Before;
 import org.junit.Test;
 import people.Visitor;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.*;
 
 public class TobaccoStallTest {
 
@@ -36,12 +36,12 @@ public class TobaccoStallTest {
 
     @Test
     public void visitorIsAllowedAtTobaccoStall() {
-        assertEquals(true, tobaccoStall.isAllowedTo(adult));
+        assertTrue(tobaccoStall.isAllowedTo(adult));
     }
 
     @Test
     public void visitorIsNotAllowedAtTobaccoStall() {
-        assertEquals(false, tobaccoStall.isAllowedTo(child));
+        assertFalse(tobaccoStall.isAllowedTo(child));
     }
 
 }
